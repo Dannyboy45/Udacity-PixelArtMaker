@@ -1,0 +1,35 @@
+body { 
+      border: 1px solid grey;
+      width: 320px;
+}
+
+h1 {
+    border: 5px solid white;
+    margin: 10px;
+}
+
+img {
+     border: 5px solid black;
+     margin: 5px;
+}
+
+p.box1 {
+        font-style: italic;
+        border: 1px solid black;
+        margin: 5px;
+}
+
+.box2 {
+        border: 1px solid black;
+        margin: 5px        
+}
+
+span.thick {
+            font-weight: bold;    
+}
+
+ul.no-bullets {
+               list-style-type: none;
+               padding: 5;
+               margin: ;
+}
