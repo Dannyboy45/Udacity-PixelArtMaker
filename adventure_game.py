@@ -1,8 +1,6 @@
 import time
 import random
 
-
-
 def print_pause(message_to_print):
     print(message_to_print)
     time.sleep(0.5)
@@ -10,9 +8,9 @@ def print_pause(message_to_print):
 def valid_input(prompt, option1, option2):
     while True:
         response = input(prompt).lower()
-        if option1 in response:
+        if option1 == response:
             break
-        elif option2 in response:
+        elif option2 == response:
             break
         else:
             print_pause("Sorry, I don't understand")
@@ -52,12 +50,12 @@ def service_station(items):
         global remaining_walks
         remaining_walks -= 1 
 
-        if remaining_walks  == 0 :
-            print_pause("Oh no! You ran out of gas on your way to the service station.")
+        print_pause("Oh no! You ran out of gas on your way to the service station.")
+
+        if remaining_walks  == 0 :            
             print_pause("You're tired, you cannot walk anymore. You lost.")
             play_again()
 
-        print_pause("Oh no! You ran out of gas on your way to the service station.")
         print_pause("You walk to the nearest gas station and fill up a small gas tank "
                     "which you use to fill up your % s." % rnd_veh)
         print_pause("You can walk % s more time(s)." % remaining_walks)
@@ -79,14 +77,17 @@ def drive_car(items):
 def play_game():
     global rnd_veh
     rnd_veh = vehicle_options()
+
+    global remaining_walks
+    remaining_walks = 3
+
     items = []
     intro()
     drive_car(items)
 
 def play_again():
-    global remaining_walks
-    remaining_walks = 3
-    response = valid_input("Would you like to play again?"
+
+    response = valid_input("Would you like to play again?\n"
                            "Please say 'yes' or 'no'.\n",
                            "yes", "no")
     if "no" in response:
@@ -95,13 +96,5 @@ def play_again():
     elif "yes" in response:
         play_game()
 
-
-remaining_walks = 3
-rnd_veh = vehicle_options()        
+    
 play_game()
-play_again()
-
-
-
-
-
