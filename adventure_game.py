@@ -84,6 +84,7 @@ def play_game():
     items = []
     intro()
     drive_car(items)
+    play_again()
 
 def play_again():
 
