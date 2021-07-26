@@ -21,8 +21,14 @@ function makeGrid() {
         const row = document.createElement('tr');
 
         for(let j = 0; j < numOfColumns; j++){
-            const column = document.createElement('td', 'blah');
-            row.appendChild(column);
+            const cell = document.createElement('td', 'blah');
+
+            cell.addEventListener('click', event => {
+                event.target.style.backgroundColor = "blue";
+                //console.log(event.target);
+            });
+
+            row.appendChild(cell);
         }
 
         tableGrid.appendChild(row);
