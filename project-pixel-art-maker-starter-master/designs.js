@@ -1,19 +1,7 @@
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
-function makeGrid() {
-
-
-
-// Your code goes here!
-       
+function makeGrid() {       
 
     const numOfRows = parseInt(document.getElementById('inputHeight').value);
     const numOfColumns = parseInt(document.getElementById('inputWidth').value);
-
-    //alert('table or rows and columns: ' + numOfRows + ' ' + numOfColumns); 
 
     const tableGrid = document.getElementById('pixelCanvas');
 
@@ -25,7 +13,6 @@ function makeGrid() {
 
             cell.addEventListener('click', event => {
                 event.target.style.backgroundColor = "blue";
-                //console.log(event.target);
             });
 
             row.appendChild(cell);
@@ -33,7 +20,4 @@ function makeGrid() {
 
         tableGrid.appendChild(row);
     }
-
-
-
 }
