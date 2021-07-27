@@ -8,13 +8,13 @@ window.addEventListener('load', function() {
     });
 })
 
-function makeGrid() {    
-    
+function makeGrid() {
+
     const tableGrid = document.getElementById('pixelCanvas');
     tableGrid.innerHTML = '';
 
     const numOfRows = parseInt(document.getElementById('inputHeight').value);
-    const numOfColumns = parseInt(document.getElementById('inputWidth').value);    
+    const numOfColumns = parseInt(document.getElementById('inputWidth').value);
 
     for(let i = 0; i < numOfRows; i++){
         const row = document.createElement('tr');
