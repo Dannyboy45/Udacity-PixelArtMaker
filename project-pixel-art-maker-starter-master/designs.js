@@ -23,7 +23,8 @@ function makeGrid() {
             const cell = document.createElement('td');
 
             cell.addEventListener('click', event => {
-                event.target.style.backgroundColor = "blue";
+                const colorPicker = document.getElementById('colorPicker');
+                event.target.style.backgroundColor = colorPicker.value;
             });
 
             row.appendChild(cell);
